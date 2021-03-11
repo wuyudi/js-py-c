@@ -1,5 +1,6 @@
-from bottle import run, get, response
 import ctypes as ct
+
+from bottle import get, response, run
 
 # https://stackoverflow.com/a/27781231/13040423
 
@@ -27,7 +28,7 @@ def _main(key):
     return (
         {"key": global_dict[key]}
         | {"str": return_char_p().decode("utf-8")}
-        | {"int": return_int(), "int_add": return_int_add(1)}
+        | {"int": return_int(), "int_add": return_int_add(4)}
     )
 
 
